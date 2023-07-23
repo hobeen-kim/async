@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 @Service
 public class AsyncService {
 
-//    @Async("threadPoolTaskExecutor")
+    @Async("threadPoolTaskExecutor")
     public CompletableFuture<Boolean> sendEmail(){
         try {
             System.out.println("sending Email ...");
@@ -23,7 +23,7 @@ public class AsyncService {
         return new AsyncResult<>(Boolean.TRUE).completable();
     }
 
-//    @Async("threadPoolTaskExecutor")
+    @Async("threadPoolTaskExecutor")
     public CompletableFuture<Boolean> sendMessage(){
         try {
             System.out.println("sending message ...");
